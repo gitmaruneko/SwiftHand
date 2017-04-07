@@ -1,12 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 # WARNING: Please assign proper contents and uncomment following four export statements.
-export ADK_ROOT="/Users/wtchoi/Library/Android/sdk"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
-export GUAVA_VERSION="17.0"
-export DX_VERSION="21.1.2"
-
-
+export ADK_ROOT=/home/maruneko/Android/Sdk
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_51
+export GUAVA_VERSION=17.0
+export DX_VERSION=23.0.3
 
 DOLLAR="\$"
 declare -a arr=("ADK_ROOT" "JAVA_HOME" "GUAVA_VERSION" "DX_VERSION")
@@ -41,7 +39,7 @@ BACK_END_PATH="src/back-end/target/back-end-0.1-jar-with-dependencies.jar"
 
 echo "[build.sh] Generating inst.sh instrumentation script"
 
-echo "#!/bin/sh" > $IS
+echo "#!/bin/bash" > $IS
 echo "set -x" >> $IS
 echo "export ADK_ROOT=$ADK_ROOT" >> $IS
 echo "export JAVA_HOME=$JAVA_HOME" >> $IS
@@ -50,7 +48,7 @@ chmod 700 $IS
 
 echo "[build.sh] Generating test.sh GUI testing script"
 
-echo "#!/bin/sh" > $TS
+echo "#!/bin/bash" > $TS
 echo "set -x" >> $TS
 echo "export ADK_ROOT=$ADK_ROOT" >> $TS
 echo "export JAVA_HOME=$JAVA_HOME" >> $TS

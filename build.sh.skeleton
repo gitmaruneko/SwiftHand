@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 # WARNING: Please assign proper contents and uncomment following four export statements.
-#export ADK_ROOT=
-#export JAVA_HOME=
-#export GUAVA_VERSION=
-#export DX_VERSION=
+export ADK_ROOT=/home/maruneko/Android/Sdk
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_51
+export GUAVA_VERSION=17.0
+export DX_VERSION=24.0.2
 
 DOLLAR="\$"
 declare -a arr=("ADK_ROOT" "JAVA_HOME" "GUAVA_VERSION" "DX_VERSION")
